@@ -46,8 +46,10 @@ function initMap() {
     var latitude = document.getElementById("txtLatitude").value;
     var zoom = document.getElementById("txtZoom").value;
 
+    var oMap = document.getElementById('map');
+
     pos = { lat: Number.parseFloat(latitude), lng: Number.parseFloat(longitude) };
-    map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(oMap, {
         center: pos,
         zoom: Number.parseFloat(zoom)
     });
