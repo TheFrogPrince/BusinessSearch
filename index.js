@@ -18,6 +18,7 @@ var oPagination;
 var fMetersPerMile = 1609.344;
 
 
+
 function loadGoogleScript() {
     var sAPIKey = document.getElementById("txtApiKey").value;
     var oScript = document.getElementById("scriptGoogle");
