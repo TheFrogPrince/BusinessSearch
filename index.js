@@ -98,7 +98,7 @@ function getNearbyPlaces(position) {
 
 function getMoreNearbyPlaces() {
     currPage = currPage + 1;
-    if (currPage < 3) {
+    //if (currPage < 3) {
         if (oPagination != null) {
             if (oPagination.hasNextPage) {
                 oPagination.nextPage();
@@ -110,7 +110,7 @@ function getMoreNearbyPlaces() {
         else {
             alert("Search completed.");
         }
-    }
+    //}
 }
 
 function processResults() {
