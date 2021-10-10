@@ -25,6 +25,7 @@ function loadGoogleScript() {
     oScript.remove();
     oScript = document.createElement("SCRIPT");
     oScript.id = "scriptGoogle";
+    oScript.async = true;
     oScript.src = "https://maps.googleapis.com/maps/api/js?key=" + sAPIKey + "&libraries=places&callback=initMap";
     document.body.appendChild(oScript);
     document.getElementById("btnLoadMap").style.visibility = "hidden";
