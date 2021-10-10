@@ -77,6 +77,7 @@ function search() {
     getNearbyPlaces(map.getCenter());
 }
 
+
 // Perform a Places Nearby Search Request
 function getNearbyPlaces(position) {
     currPage = 0;
