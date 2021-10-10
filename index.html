@@ -17,84 +17,84 @@
 <html>
 
 <head>
-  <title>Business Finder</title>
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-  <meta charset="utf-8">
-  <style>
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    #map {
-      height: 100%;
-      background-color: grey;
-    }
+    <title>Business Finder</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+           /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+           #map {
+               height: 100%;
+               width: 100%;
+               background-color: grey;
+           }
 
-    /* Optional: Makes the sample page fill the window. */
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
+           /* Optional: Makes the sample page fill the window. */
+           html,
+           body {
+               height: 100%;
+               margin: 0;
+               padding: 0;
+           }
 
-    /* TODO: Step 4A1: Make a generic sidebar */
-    /* Styling for an info pane that slides out from the left. 
-     * Hidden by default. */
-    #panel {
-      height: 100%;
-      width: null;
-      background-color: white;
-      position: fixed;
-      z-index: 1;
-      overflow-x: hidden;
-      transition: all .2s ease-out;
-    }
+           /* TODO: Step 4A1: Make a generic sidebar */
+           /* Styling for an info pane that slides out from the left.
+        * Hidden by default. */
+           #panel {
+               height: 100%;
+               background-color: white;
+               position: fixed;
+               z-index: 1;
+               overflow-x: hidden;
+           }
 
-    .open {
-      width: 250px;
-    }
+           .open {
+               width: 250px;
+           }
 
-    /* Styling for place details */
-    .hero {
-      width: 100%;
-      height: auto;
-      max-height: 166px;
-      display: block;
-    }
+           /* Styling for place details */
+           .hero {
+               width: 100%;
+               height: auto;
+               max-height: 166px;
+               display: block;
+           }
 
-    .place,
-    p {
-      font-family: 'open sans', arial, sans-serif;
-      padding-left: 18px;
-      padding-right: 18px;
-    }
+           .place,
+           p {
+               font-family: 'open sans', arial, sans-serif;
+               padding-left: 18px;
+               padding-right: 18px;
+           }
 
-    .details {
-      color: darkslategrey;
-    }
+           .details {
+               color: darkslategrey;
+           }
 
-    a {
-      text-decoration: none;
-      color: cadetblue;
-    }
-  </style>
+           a {
+               text-decoration: none;
+               color: cadetblue;
+           }
+    </style>
 </head>
 
 <body>
+
 
     <div id="panelInput">
         <table>
             <tbody>
                 <tr>
                     <td>API Key:</td>
-                    <td><input id="txtApiKey" type="text" value="" /></td>
+                    <td><input id="txtApiKey" type="text" value="AIzaSyCPFQLGeRSNddIl_9Ze0Y21F26mXs_4748" /></td>
                     <td>Search Term:</td>
                     <td><input id="txtSearchTerm" type="text" value="gun store" /></td>
                     <td>Longitude:</td>
-                    <td><input id="txtLongitude" type="text" value="30.3490977" /></td>
+                    <td><input id="txtLongitude" type="text" value="-98.4860729" /></td>
                     <td>Latitude:</td>
-                    <td><input id="txtLatitude" type="text" value="-97.7385748" /></td>
+                    <td><input id="txtLatitude" type="text" value="29.4616246" /></td>
                     <td>Zoom:</td>
-                    <td><input id="txtZoom" type="text" value="10.67z" /></td>
+                    <td><input id="txtZoom" type="text" value="10.94" /></td>
                     <td>Radius In Miles:</td>
                     <td>Max per Google is 50000 meters, 31.06856 miles</td>
                 </tr>

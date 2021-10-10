@@ -1,22 +1,21 @@
 /* Note: This example requires that you consent to location sharing when
  * prompted by your browser. If you see the error "Geolocation permission
  * denied.", it means you probably did not give permission for the browser * to locate you. */
-var currPage;
-var lastLocation;
-var pos;
-var map;
-var bounds;
-var infoWindow;
-var currentInfoWindow;
-var service;
-var infoPane;
-var currResults;
-var iCurrResult;
-var sContinueToken;
-var oPagination;
+let currPage;
+let lastLocation;
+let pos;
+let map;
+let bounds;
+let infoWindow;
+let currentInfoWindow;
+let service;
+let infoPane;
+let currResults;
+let iCurrResult;
+let sContinueToken;
+let oPagination;
 
-var fMetersPerMile = 1609.344;
-
+let fMetersPerMile = 1609.344;
 
 
 function loadGoogleScript() {
@@ -25,8 +24,8 @@ function loadGoogleScript() {
     oScript.remove();
     oScript = document.createElement("SCRIPT");
     oScript.id = "scriptGoogle";
-    oScript.async = true;
     oScript.src = "https://maps.googleapis.com/maps/api/js?key=" + sAPIKey + "&libraries=places&callback=initMap";
+    oScript.async = true;
     document.body.appendChild(oScript);
     document.getElementById("btnLoadMap").style.visibility = "hidden";
     document.getElementById("btnSearch").disabled = false;
@@ -47,16 +46,27 @@ function initMap() {
     var latitude = document.getElementById("txtLatitude").value;
     var zoom = document.getElementById("txtZoom").value;
 
+    pos = { lat: Number.parseFloat(latitude), lng: Number.parseFloat(longitude) };
+
     var oMap = document.getElementById('map');
 
-    pos = { lat: Number.parseFloat(latitude), lng: Number.parseFloat(longitude) };
-    map = new google.maps.Map(oMap, {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
         zoom: Number.parseFloat(zoom)
     });
 
+
+
+    //pos = { lat: -33.856, lng: 151.215 };
+    //map = new google.maps.Map(document.getElementById('map'), {
+    //    center: pos,
+    //    zoom: 15
+    //});
+
+
+
     //debugger;
-    
+
 }
 
 // Handle a geolocation error
@@ -183,8 +193,7 @@ function createMarker(place) {
 function gridDetails(placeResult, marker, status) {
     var body = document.getElementById("bodyResult");
     var bFound = false;
-    for (var i = 0; i < body.rows.length - 1; i++)
-    {
+    for (var i = 0; i < body.rows.length - 1; i++) {
         if (body.rows[i].cells[3].innerText == placeResult.place_id) {
             bFound = true;
             break;
